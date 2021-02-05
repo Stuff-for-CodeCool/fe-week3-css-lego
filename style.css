@@ -1,138 +1,125 @@
 /* GENERAL */
 html {
-  font: 15px/1.6 sans-serif;
-  color: #333;
+    font: 15px/1.6 sans-serif;
+    color: #333;
 }
 
 body {
-  margin: 0 auto;
-  padding: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  max-width: 960px;
-  height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: 960px;
+    height: 100vh;
 }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+}
 
 /* HEADER */
 header {
-  background: #666;
-  border-bottom: 1px solid #333;
+    background: #666;
+    border-bottom: 1px solid #333;
 }
 
-nav { padding: 0.5em; }
+nav {
+    padding: 0.5em;
+}
 
 nav ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-nav li { margin-left: 0.5em; }
+nav li {
+    margin-left: 0.5em;
+}
 
 nav li.main {
-  margin-left: 0;
-  font-weight: bold;
+    margin-left: 0;
+    font-weight: bold;
 }
 
-nav li.form { margin-left: auto; }
+nav li.form {
+    margin-left: auto;
+}
 
-nav a { color: #fff; }
+nav a {
+    color: #fff;
+}
 
-nav a:hover, nav a:active {
-  color: #ddd;
+nav a:hover,
+nav a:active {
+    color: #ddd;
 }
 
 nav input[type="search"] {
     border: 1px solid;
-    border-radius: .25em 0 0 .25em;
-    padding: .2em;
+    border-radius: 0.25em 0 0 0.25em;
+    padding: 0.2em;
 }
 
 nav input[type="search"] + button {
-    border-radius: 0 .25em .25em 0;
+    border-radius: 0 0.25em 0.25em 0;
     border: 1px solid;
     border-left: 0;
     padding: 0.2em;
 }
 
-#toggle-nav { display: none; }
+#toggle-nav {
+    display: none;
+}
 
 /* MAIN SECTION */
-main { margin: 1em; }
+main {
+    margin: 1em;
+}
 
 section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 section.hero {
-  background: url("https://picsum.photos/960") center center;
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  margin: -1em;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+    background: url("https://picsum.photos/960") center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    margin: -1em;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 section h1 {
     font-size: 3em;
-    text-shadow: 1px -1px #fff,
-                -1px  1px #fff,
-                -1px -1px #fff,
-                1px   1px #fff;
+    text-shadow: 1px -1px #fff, -1px 1px #fff, -1px -1px #fff, 1px 1px #fff;
 }
 
 article {
-  margin: 2em 1em 1em;
-  border-bottom: 1px solid;
+    margin: 2em 1em 1em;
+    border-bottom: 1px solid;
 }
 
-article:last-child { border-bottom: 0; }
+article.wide {
+    grid-column: 1 / -1;
+}
+
+article:last-child {
+    border-bottom: 0;
+}
 
 img {
     width: 100%;
     height: auto;
-    border-radius: .5em;
+    border-radius: 0.5em;
 }
 
 /* FOOTER */
 footer {
-  font-size: 14px;
-  line-height: 3;
-  text-align: center;
-  background: #999;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 420px) {
-  nav { position: relative; }
-
-  nav ul { flex-direction: column; }
-
-  nav li,
-  nav li.main,
-  nav li.form {
+    font-size: 14px;
+    line-height: 3;
     text-align: center;
-    margin: 0;
-  }
-
-  nav li:not(.main) { display: none; }
-
-  nav li.show { display: list-item; }
-
-  #toggle-nav {
-    display: block;
-    position: absolute;
-    right: 0.5em;
-    top: 0.5em;
-  }
-
-  #toggle-nav::before { content: "☰"; }
-
-  #toggle-nav span { display: none; }
-
-  section { grid-template-columns: 1fr; }
+    background: #999;
 }

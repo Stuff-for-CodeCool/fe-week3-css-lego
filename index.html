@@ -9,7 +9,6 @@
 <body>
     <header>
         <nav>
-            <button id="toggle-nav"><span>Toggle navigation</span></button>
             <ul>
                 <li class="main"><a href="#">Home</a></li>
                 <li><a href="#">Link</a></li>
@@ -44,7 +43,7 @@
                 <p>Nobis, enim nam sapiente earum velit consectetur reprehenderit eos odit quidem modi nisi rem nemo laboriosam? Fugit, ut delectus? Reprehenderit pariatur eveniet quaerat ad veritatis molestiae, cupiditate odio sapiente adipisci.</p>
                 <p>Veritatis fugit deleniti mollitia maiores provident? Deserunt ducimus quis molestias, eligendi numquam ex, iusto possimus, distinctio asperiores ipsum quos est nam? Dolore eveniet illo ipsam ex nulla nobis blanditiis vel!</p>
             </article>
-            <article>
+            <article class="wide">
                 <h3>Heading 3</h3>
                 <p><img src="http://picsum.photos/500" alt="Image"></p>
                 <p>Fuga autem aliquid suscipit dignissimos rerum, impedit fugit veniam neque id possimus animi modi amet rem eos repellendus molestias veritatis commodi, voluptates placeat. Sunt ut, ullam voluptatibus soluta corporis inventore?</p>
@@ -72,17 +71,5 @@
         </section>
     </main>
     <footer>© Company 2021</footer>
-    <script>
-        const toggleNavButton = document.querySelector("#toggle-nav");
-        const navLinks = document.querySelectorAll("header nav li:not(.main)");
-
-        //  Hide header links on click
-        toggleNavButton.addEventListener("click", (event) => {
-            event.preventDefault();
-            for (let link of navLinks) {
-                link.classList.toggle("show");
-            }
-        });
-    </script>
 </body>
 </html>
