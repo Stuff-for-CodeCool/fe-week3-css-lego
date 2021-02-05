@@ -69,10 +69,6 @@ nav input[type="search"] + button {
     padding: 0.2em;
 }
 
-#toggle-nav {
-    display: none;
-}
-
 /* MAIN SECTION */
 main {
     margin: 1em;
